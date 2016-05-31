@@ -43,9 +43,9 @@ class RegistrationViewController: UIViewController {
         if let tmp = user {
             print (user)
             
-            //let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate //as! casts this returned value to type AppDelegate
+            let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate //as! casts this returned value to type AppDelegate
             
-           // appDelegate.authorizationNavigationController
+            appDelegate.navigateToLoggedInNavigationController()
         } else {
             if let temp2 = failure_message{ //temp2 is NOT optional. If it exists, now we can use it
                 print (temp2)
